@@ -3,22 +3,22 @@ import { connect } from 'react-redux';
 
 class Restaurants extends Component {
 
-  render() {
+	render() {
 
-    let restaurants = this.props.restaurants.map((restaurant, index) => <li key={index}>{restaurant.name}</li>);
+		let restaurants = this.props.restaurants.map((restaurant, index) => <li key={index}>{restaurant.name}</li>);
 
-    return (
-      <div>
-        <ul>
-          {restaurants}
-        </ul>
-      </div>
-    );
-  }
+		return (
+			<div>
+				<ul>
+					{restaurants}
+				</ul>
+			</div>
+		);
+	}
 };
 
 const mapStateToProps = state => {
-  return { restaurants: state.restaurants }
+	return { restaurants: state.restaurants }
 }
 
 export default connect(mapStateToProps)(Restaurants);
